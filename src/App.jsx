@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const currentYear = new Date().getFullYear()
 
   return (
     <>
@@ -27,6 +28,14 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
+      </p>
+      <p className="read-the-docs">
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
+          Learn React
+        </a>
+      </p>
+      <p className="read-the-docs">
+        {currentYear}
       </p>
     </>
   )
