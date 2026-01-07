@@ -4,9 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+    // ДЕКЛАРАТИВНЫЙ СТИЛЬ: React hook useState
+  // Мы объявляем состояние, а React сам управляет его обновлением
   const [count, setCount] = useState(0)
+
+  // ИМПЕРАТИВНЫЙ СТИЛЬ: явное вычисление значения
+  // Мы говорим "КАК" получить текущий год - вызываем методы объекта Date
   const currentYear = new Date().getFullYear()
 
+   // ДЕКЛАРАТИВНЫЙ СТИЛЬ: JSX описывает "ЧТО" должно быть отображено
+  // React сам решает "КАК" это отобразить в DOM
   return (
     <>
       <div>
@@ -19,6 +26,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+         {/* ДЕКЛАРАТИВНЫЙ СТИЛЬ: обработчик onClick декларативно описан */}
+        {/* ИМПЕРАТИВНЫЙ СТИЛЬ внутри: стрелочная функция явно вызывает setCount */}
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -35,6 +44,7 @@ function App() {
         </a>
       </p>
       <p className="read-the-docs">
+         {/* ДЕКЛАРАТИВНЫЙ СТИЛЬ: мы описываем, что нужно вставить значение */}
         {currentYear}
       </p>
     </>
